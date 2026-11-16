@@ -55,13 +55,13 @@
         ::-webkit-scrollbar-thumb:hover { background: #176B52; }
     </style>
 </head>
-<body class="text-gray-800 font-sans h-screen flex overflow-hidden">
+<body class="text-gray-800 font-sans h-screen w-screen overflow-hidden m-0 p-0">
 
     <!-- App Container (Hidden during print) -->
-    <div id="app-container" class="flex w-full h-full no-print">
+    <div id="app-container" class="flex w-full h-full no-print bg-background relative">
         
         <!-- Sidebar -->
-        <aside class="w-64 bg-primary text-white flex flex-col shadow-xl transition-all duration-300 z-20">
+        <aside class="w-64 bg-primary text-white flex flex-col shadow-xl transition-all duration-300 z-20 shrink-0">
             <div class="p-6 flex items-center space-x-3 border-b border-secondary/30">
                 <i class="fa-solid fa-school text-2xl text-secondary"></i>
                 <div>
@@ -98,10 +98,10 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+        <main class="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
             
             <!-- Top Header -->
-            <header class="bg-white shadow-sm p-4 flex justify-between items-center z-10">
+            <header class="bg-white shadow-sm p-4 flex justify-between items-center z-20 shrink-0 relative">
                 <h2 id="page-title" class="text-xl font-bold text-primary">Dashboard</h2>
                 <div class="flex items-center space-x-4">
                     <div id="realtime-clock" class="text-sm font-medium text-gray-600 bg-background px-4 py-2 rounded-full border border-secondary/50">
@@ -117,7 +117,7 @@
             </div>
 
             <!-- Content Area -->
-            <div class="flex-1 overflow-y-auto p-6" id="main-content">
+            <div class="flex-1 overflow-y-auto p-6 min-h-0 bg-background" id="main-content">
                 
                 <!-- DASHBOARD VIEW -->
                 <div id="view-dashboard" class="space-y-6">
